@@ -1,0 +1,30 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+       http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+	<camelContext xmlns="http://camel.apache.org/schema/spring">
+	</camelContext>
+	
+
+	<bean id="frameDecoder" class="org.hbird.transport.protocols.ccsds.transferframe.CcsdsFrameDecoder">
+	<constructor-arg><value>13</value></constructor-arg>
+	<constructor-arg><value>false</value></constructor-arg>
+	<constructor-arg><value>false</value></constructor-arg>
+	
+	
+  </bean>
+
+
+	<camelContext id="camel-A" xmlns="http://camel.apache.org/schema/spring">
+		<route>
+			<from uri="file:///tmp/slipstream3/" />
+			<convertBodyTo type="byte[]"/>
+			<to uri="bean:frameDecoder" />
+			<!-- <to uri="file:///tmp/slipstream.out/" />  -->
+		</route>
+	</camelContext>
+
+
+</beans>
