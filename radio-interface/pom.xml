@@ -2,17 +2,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<artifactId>hummingbird-transport</artifactId>
-		<groupId>org.hbird</groupId>
-		<version>0.0.1-SNAPSHOT</version>
-	</parent>
-
-	<groupId>org.hbird.transport</groupId>
-	<artifactId>assembly</artifactId>
-	<name>Assembly</name>
+	<groupId>org.hbird.groundstation</groupId>
+	<artifactId>radiointerface</artifactId>
+	<name>Radio Interface</name>
 	<version>0.0.1-SNAPSHOT</version>
-	<description>Provides system integration tests</description>
+	<description>Hummingbird-powered radio interface for use in a Ground Station</description>
 
 	<build>
 		<plugins>
