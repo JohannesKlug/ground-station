@@ -9,7 +9,7 @@
 
 
   <bean id="activemq" class="org.apache.activemq.camel.component.ActiveMQComponent">
-    <property name="brokerURL" value="tcp://10.48.18.63:61616"/>
+    <property name="brokerURL" value="tcp://localhost:61616"/>
   </bean>
   
   <bean id="assembly" class="org.hbird.transport.assembly.SerialPortAssembly">

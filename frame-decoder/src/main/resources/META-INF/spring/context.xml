@@ -16,12 +16,17 @@
 	
   </bean>
 
+  <bean id="activemq" class="org.apache.activemq.camel.component.ActiveMQComponent">
+    <property name="brokerURL" value="tcp://localhost:61616"/>
+  </bean>
 
-	<camelContext id="camel-A" xmlns="http://camel.apache.org/schema/spring">
+	<camelContext id="FrameDecoder" xmlns="http://camel.apache.org/schema/spring">
 		<route>
-			<from uri="file:///tmp/slipstream3/" />
-			<convertBodyTo type="byte[]"/>
+			<!-- <from uri="file:///tmp/slipstream3/" /> -->
+			<!-- <convertBodyTo type="byte[]"/> -->
+			<from uri="activemq:slipstream" />
 			<to uri="bean:frameDecoder" />
+			<to uri="activemq:packets" />
 			<!-- <to uri="file:///tmp/slipstream.out/" />  -->
 		</route>
 	</camelContext>
