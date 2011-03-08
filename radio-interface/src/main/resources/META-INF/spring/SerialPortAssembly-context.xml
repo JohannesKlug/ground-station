@@ -12,7 +12,7 @@
     <property name="brokerURL" value="tcp://localhost:61616"/>
   </bean>
   
-  <bean id="assembly" class="org.hbird.transport.assembly.SerialPortAssembly">
+  <bean id="assembly" class="org.hbird.transport.protocols.hardware.SerialPortAssembly">
   </bean>
 
 </beans>
