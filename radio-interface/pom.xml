@@ -36,4 +36,7 @@
 			<version>5.4.2</version>
 		</dependency>
 	</dependencies>
+  <properties>
+        <camel.version>2.6.0</camel.version>
+  </properties>
 </project>
