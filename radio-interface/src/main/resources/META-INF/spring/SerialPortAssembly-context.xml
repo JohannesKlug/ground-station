@@ -12,7 +12,12 @@
     <property name="brokerURL" value="tcp://localhost:61616"/>
   </bean>
   
+  <bean id="sync" class="org.hbird.transport.protocols.sync.asm.CcsdsAsm">
+  </bean>
+  
   <bean id="assembly" class="org.hbird.transport.protocols.hardware.SerialPortAssembly">
+  	<constructor-arg index="0" type="java.lang.String" value="/dev/ttyUSB0" />
+  	<constructor-arg index="1"><ref bean="sync"/></constructor-arg>
   </bean>
 
 </beans>
