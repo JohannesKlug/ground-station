@@ -7,6 +7,12 @@
 	<name>Radio Interface</name>
 	<version>0.0.1-SNAPSHOT</version>
 	<description>Hummingbird-powered radio interface for use in a Ground Station</description>
+  
+    <parent>                                                                                                                                                                                                                             
+      <groupId>org.sonatype.oss</groupId>                                                                                                                                                                                          
+      <artifactId>oss-parent</artifactId>                                                                                                                                                                                          
+      <version>7</version>                                                                                                                                                                                                         
+    </parent>
 
 	<build>
 		<plugins>
@@ -33,10 +39,10 @@
 		<dependency>
 			<groupId>org.apache.activemq</groupId>
 			<artifactId>activemq-camel</artifactId>
-			<version>5.4.2</version>
+			<version>5.5.0</version>
 		</dependency>
 	</dependencies>
   <properties>
-        <camel.version>2.6.0</camel.version>
+        <camel.version>2.7.2</camel.version>
   </properties>
 </project>
