@@ -9,7 +9,7 @@
 	
 
 	<bean id="frameDecoder" class="org.hbird.transport.protocols.ccsds.transferframe.CcsdsFrameDecoder">
-	<constructor-arg><value>13</value></constructor-arg>
+	<constructor-arg><value>33</value></constructor-arg>
 	<constructor-arg><value>false</value></constructor-arg>
 	<constructor-arg><value>false</value></constructor-arg>
 	
@@ -26,7 +26,7 @@
 			<!-- <convertBodyTo type="byte[]"/> -->
 			<from uri="activemq:slipstream" />
 			<to uri="bean:frameDecoder" />
-			<to uri="activemq:packets" />
+			<to uri="activemq:rawPackets" />
 			<!-- <to uri="file:///tmp/slipstream.out/" />  -->
 		</route>
 	</camelContext>
