@@ -9,7 +9,7 @@
 	
 
 	<bean id="frameDecoder" class="org.hbird.transport.protocols.ccsds.transferframe.CcsdsFrameDecoder">
-	<constructor-arg><value>33</value></constructor-arg>
+	<constructor-arg><value>30</value></constructor-arg>
 	<constructor-arg><value>false</value></constructor-arg>
 	<constructor-arg><value>false</value></constructor-arg>
 	
