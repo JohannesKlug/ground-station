@@ -36,6 +36,6 @@
 
   </dependencies>
   <properties>
-  	<camel.version>2.7.2</camel.version>
+  	<camel.version>2.9.1</camel.version>
   </properties>
 </project>

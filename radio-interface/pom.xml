@@ -26,12 +26,6 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.hbird.transport</groupId>
-			<artifactId>commons</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.hbird.transport</groupId>
 			<artifactId>protocols</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<scope>compile</scope>
@@ -43,6 +37,6 @@
 		</dependency>
 	</dependencies>
   <properties>
-        <camel.version>2.7.2</camel.version>
+        <camel.version>2.9.1</camel.version>
   </properties>
 </project>
